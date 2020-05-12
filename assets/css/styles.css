@@ -9,7 +9,7 @@
   --colorbackground: #fafafa;
   --colorfont: #000;
   --colorfontcontraste: #fff
-  --bordershadowfino: 4px 4px 15px 2px rgba(0, 0, 0, 0.35) !important ;
+  --bordershadowfino: 4px 4px 15px 2px rgba(0, 0, 0, 0.85) !important ;
   --bordershadow: 0px 4px 8px rgba(0, 0, 0, 0.08) !important;
   --background-button: radial-gradient(
     circle at center,
@@ -227,31 +227,80 @@ a {
 .carddestaque {
   display: flex;
   flex-direction: column;
-  justify-content: baseline;
-  align-items: flex-start;
+  justify-content: space-between;
+  align-items: baseline;
   overflow: hidden;
   border-radius: 10px;
-  flex-basis: 32.5%;
+  flex-basis: 24%;
   box-shadow : var(--bordershadow);
+  margin-top: 20px;
+  min-height: 335px;
+  
+
+}
+
+.carddestaque:hover {
+  box-shadow : 0px 4px 8px rgba(255, 189, 250, 0.55) !important ;
+}
+
+@media(max-width: 992px){
+  .carddestaque {
+
+    flex-basis: 32%;
+    
+  }
+}
+
+@media(max-width: 600px){
+  .carddestaque {
+
+    flex-basis: 49%;
+    
+  }
 }
 
 .imgdestaque img {
-  height: 240px;
+  width: 100%;
   object-fit: cover;
   object-position: center;
+  max-height: 192px;
 
 }
 
 .titulodestaque {
-  font-size: 1.2em;
+  font-size: 1.0em;
   font-weight: 600;
   margin: 10px;
 }
 
+.categoria{
+  font-size: 0.8em;
+  font-weight: 600;
+  margin: 0px 10px;
+
+}
+
 .textodestaque {
-  font-size: 1em;
+  width: 97%;
+
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+}
+
+.textodestaque span{
+  font-size: 0.8em;
   font-weight: 300;
   margin: 10px;
+  text-align: center;
+  padding: 7px;
+  border-radius: 15px;
+  background-image: var(--background-button);
+  display: inline-block;
+  width: 50px;
+  color: var(--colorbackground)
+
+
 }
 
 .footer {
@@ -274,8 +323,6 @@ a {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-
-  
 }
 
 .imgfooter {
