@@ -33,9 +33,11 @@ function showApartamentos(data) {
     <div class="imgdestaque">
       <img src=${data[i].photo} alt="Experiência Online" />
     </div>
+    <a href="./detail.html">
     <div class="titulodestaque">
       <p>${data[i].name}</p>
     </div>
+    </a>
     <div class="categoria">
     <p>${data[i].property_type}</p>
   </div>
