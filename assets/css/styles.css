@@ -2,15 +2,21 @@
   margin: 0;
   padding: 0;
   box-sizing: 0;
+  color: var(--colorfont)
 }
 
 :root {
-  --width-max: 1200px;
+  --width-max: 1080px;
   --colorbackground: #fafafa;
-  --colorfont: #000;
+  --colorfont: rgb(72, 72, 72);
   --colorfontcontraste: #fff
   --bordershadowfino: 4px 4px 15px 2px rgba(0, 0, 0, 0.85) !important ;
   --bordershadow: 0px 4px 8px rgba(0, 0, 0, 0.08) !important;
+  --fontminuscula: 0.7em
+  --fontpequena: 0.85em;
+  --fontnormal: 1em;
+  --fontgrande: 1.2em;
+  --fontgigante: 1.4em;
   --background-button: radial-gradient(
     circle at center,
     #ff385c 0%,
@@ -20,12 +26,13 @@
     #bd1e59 75%,
     #bd1e59 100%
   ) !important;
+
 }
 
 body {
   width: 100%;
   font-family: "Roboto", sans-serif;
-  font-size: 1.1em;
+  font-size: var(--fontnormal);
   color: var(--colorfont);
 }
 
@@ -36,7 +43,7 @@ li {
 a {
   text-decoration: none;
   color: var(--colorfont);
-  font-size: 1.1em;
+  font-size: var(--fontnormal);
 }
 
 .container {
@@ -159,12 +166,12 @@ a {
 
 .fieldform label {
   margin: 0px 0px 0px 10px;
-  font-size: 0.7em;
+  font-size: var(--fontminuscula);
 }
 
 .fieldform input {
   margin: 5px;
-  font-size: 1.5em;
+  font-size: var(--fontgigante);
   padding: 5px;
   height: 40px;
   border: 1px solid;
@@ -179,7 +186,7 @@ a {
   height: 60%;
   border: 0px;
   border-radius: 10px;
-  font-size: 1.2em;
+  font-size: var(--fontgrande);
   color: #fff;
   background-size: 200% 200% !important;
 }
@@ -202,7 +209,7 @@ a {
 }
 
 .titulos {
-  font-size: 1.4em;
+  font-size: var(--fontgigante);
   color: var(--colorfont);
   display: flex;
   font-weight: 600;
@@ -210,9 +217,15 @@ a {
 }
 
 .tituloscolor {
-  font-size: 2em;
+  font-size: 2.8em;
   color: #e31c5f;
   margin: 30px;
+}
+
+.tituloscolor p{
+
+  color: var(--background-button);
+
 }
 
 .cardsdestaque {
@@ -268,13 +281,13 @@ a {
 }
 
 .titulodestaque {
-  font-size: 1.0em;
+  font-size: var(--fontgrande);
   font-weight: 600;
   margin: 10px;
 }
 
 .categoria{
-  font-size: 0.8em;
+  font-size: var(--fontminuscula);
   font-weight: 600;
   margin: 0px 10px;
 
@@ -289,7 +302,7 @@ a {
 }
 
 .textodestaque span{
-  font-size: 0.8em;
+  font-size: var(--fontpequena);
   font-weight: 300;
   margin: 10px;
   text-align: center;
@@ -378,16 +391,15 @@ a {
 
 .imgheadersec img:hover{
   transition: 0.5s;
-
   opacity: none;
-
   -webkit-transform: scale(1.05);
   -moz-transform: scale(1.05);
   -o-transform: scale(1.05);
   -ms-transform: scale(1.05);
   transform: scale(1.05);
-
 }
+
+
 
 .corpodetail {
   display: flex;
@@ -409,9 +421,73 @@ a {
 
 .colunamaior {
   display: flex;
+  flex-direction: column;
   width: 100%;
   flex-basis: 63%;
-  background-image: var(--background-button);
+
+}
+
+.headercoluna{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.tituloheader {
+  font-size: 1.8em;
+  font-weight: 700;
+  margin: 20px 0px;
+}
+
+.avatar {
+  margin: 20px 0px;
+}
+
+.avatar img{
+  width: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.avatar span{
+  font-size: var(--fontpequena);
+  font-weight: 300;
+  color: var(--colorfont)
+}
+
+.linkscoluna {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.linkscoluna li{
+  display: inline;
+  margin: 10px;
+  font-size: var(--fontgrande);
+}
+
+.linkscoluna li:first-child{
+  margin-left: 0;
+}
+
+.linkscoluna hr {
+  margin: 15px 0;
+}
+
+.conteudo p{
+  font-size: var(--fontnormal);
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+.conteudo span{
+  font-size: var(--fontpequena);
+  font-weight: 300;
+  margin: 10px;
 }
 
 .colunamenor {
